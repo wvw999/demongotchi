@@ -1,7 +1,7 @@
 #canvas {
   background-image: url('./demon-room.jpg');
   background-repeat: no-repeat;
-  background-size: 800px;
+  background-size: 700px;
   border:1px solid #000000;
 }
 
@@ -10,4 +10,25 @@
   background-color: darkred;
   height: auto;
   width: 1000px;
+}
+
+#stats {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  font-family: fantasy;
+  color: white;
+  float: right;
+  margin-top: 10px;
+  margin-right: 80px;
+}
+
+#demonImage {
+  background-image: url('./monster1.svg');
+}
+
+.test-img img {
+  height: 150px;
+  width: auto;
+  z-index: 10;
 }
