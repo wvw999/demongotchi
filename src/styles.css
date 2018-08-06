@@ -1,0 +1,13 @@
+#canvas {
+  background-image: url('./demon-room.jpg');
+  background-repeat: no-repeat;
+  background-size: 800px;
+  border:1px solid #000000;
+}
+
+.sidebar {
+  float: right;
+  background-color: darkred;
+  height: auto;
+  width: 1000px;
+}
