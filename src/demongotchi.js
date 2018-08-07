@@ -9,10 +9,10 @@ class Demongotchi {
 
   constructor(){
     this.name = this.namedemon();
-    this.health = 1000;
-    this.hunger = 100;
-    this.energy = 100;
-    this.mood = 100;
+    this.health = 100;
+    this.hunger = 60;
+    this.energy = 60;
+    this.mood = 60;
     this.potty = 20;
     this.dead = 0;
     this.trans = 1;
