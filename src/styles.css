@@ -1,34 +1,42 @@
-#canvas {
+.crib {
   background-image: url('./demon-room.jpg');
   background-repeat: no-repeat;
-  background-size: 700px;
+  height: 475px;
+  min-width: 600px;
   border:1px solid #000000;
-}
-
-.sidebar {
-  float: right;
-  background-color: darkred;
-  height: auto;
-  width: 1000px;
+  z-index: 0;
 }
 
 #stats {
-  position: relative;
-  top: 0px;
-  right: 0px;
   font-family: fantasy;
   color: white;
-  float: right;
-  margin-top: 10px;
-  margin-right: 80px;
+  background-color: darkred;
+  padding: 20px;
 }
 
-#demonImage {
-  background-image: url('./monster1.svg');
-}
-
-.test-img img {
+.monster-img img {
   height: 150px;
   width: auto;
+
+}
+
+.giphy-parent {
+  position: relative;
+  top: 250px;
+  right: 300px;
   z-index: 10;
 }
+
+.brown {
+  background-image: url('./runny.jpg');
+  background-repeat: no-repeat;
+  height: 475px;
+  min-width: 600px;
+  /* position: absolute; */
+  z-index: -1;
+}
+
+/* #translucent {
+    opacity: 0.8;
+    filter: alpha(opacity = 100);
+} */

@@ -13,8 +13,9 @@ class Demongotchi {
     this.hunger = 100;
     this.energy = 100;
     this.mood = 100;
-    this.potty = 21;
+    this.potty = 20;
     this.dead = 0;
+    this.trans = 1;
   }
 
   turn() {
@@ -24,10 +25,25 @@ class Demongotchi {
       this.mood = Math.ceil((this.hunger + this.energy)/2);
       this.potty ++;
       this.turnCheck();
+      console.log(this.trans);
       if (this.dead == 1) {
         self.clearInterval(gameInterval);
       }
     }, 5000);
+  }
+
+  diaper() {
+    if (this.potty >= 50) {
+      this.trans = 0.20;
+    } else if (this.potty >= 40) {
+      this.trans = 0.40;
+    } else if (this.potty >= 30) {
+      this.trans = 0.60;
+    } else if (this.potty >= 21) {
+      this.trans = 0.80;
+    } else {
+      this.trans = 1.00;
+    }
   }
 
   feed() {
@@ -40,7 +56,7 @@ class Demongotchi {
     this.health += 1;
   }
 
-  nappy() {
+  nappy(trans) {
     this.potty = 0;
   }
 

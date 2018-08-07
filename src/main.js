@@ -4,14 +4,8 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Demongotchi } from './demongotchi';
 import './demon-room.jpg';
-import './giphy.js'
-// import './monster1.svg';
-// import './monster2.svg';
-// import monster3 from './images/monster3.svg';
-// import './monster4.svg';
-// import './monster5.svg';
-
-
+import { getGiphy } from './giphy'
+// import { getFlickr } from './flickr'
 
 function updateDisplay(object) {
   let that = object
@@ -26,8 +20,9 @@ function updateDisplay(object) {
 
 $(document).ready(function(){
 
-  // let testImage = document.getElementById('monster');
-  // testImage.src = monster3;
+  let monsterList = ["monster1", "monster2", "monster3", "monster4", "monster5"]
+  let monsterPick = monsterList[Math.floor(Math.random()*monsterList.length)];
+  getGiphy(monsterPick);
 
   let demon = new Demongotchi();
 
@@ -43,17 +38,23 @@ $(document).ready(function(){
 
   $('#feed').click(function(){
     demon.feed();
+    demon.diaper();
     $('#hunger').text(demon.hunger);
+    $('#translucent').fadeTo( "slow", demon.trans );
   });
 
   $('#ruckus').click(function(){
     demon.ruckus();
+    demon.diaper();
     $('#energy').text(demon.energy);
+    $('#translucent').fadeTo( "slow", demon.trans );
   });
 
   $('#nappy').click(function(){
     demon.nappy();
+    demon.diaper();
     $('#potty').text(demon.potty);
+    $('#translucent').fadeTo( "slow", demon.trans );
   });
 
 });
