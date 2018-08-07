@@ -25,6 +25,7 @@ class Demongotchi {
       this.mood = Math.ceil((this.hunger + this.energy)/2);
       this.potty ++;
       this.turnCheck();
+      this.diaper();
       console.log(this.trans);
       if (this.dead == 1) {
         self.clearInterval(gameInterval);

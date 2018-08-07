@@ -15,6 +15,7 @@ function updateDisplay(object) {
     $('#energy').text(that.energy);
     $('#health').text(that.health);
     $('#potty').text(that.potty);
+    $('#translucent').fadeTo( "slow", that.trans );
   }, 5000);
 }
 
@@ -38,23 +39,17 @@ $(document).ready(function(){
 
   $('#feed').click(function(){
     demon.feed();
-    demon.diaper();
     $('#hunger').text(demon.hunger);
-    $('#translucent').fadeTo( "slow", demon.trans );
   });
 
   $('#ruckus').click(function(){
     demon.ruckus();
-    demon.diaper();
     $('#energy').text(demon.energy);
-    $('#translucent').fadeTo( "slow", demon.trans );
   });
 
   $('#nappy').click(function(){
     demon.nappy();
-    demon.diaper();
     $('#potty').text(demon.potty);
-    $('#translucent').fadeTo( "slow", demon.trans );
   });
 
 });
